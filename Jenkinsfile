@@ -10,7 +10,7 @@ def javahome=tool name: 'JAVAHOME', type: 'jdk'
   echo javahome
 bat """
      cd ${javahome}\\bin 
-     jar -cvf com.hotel.war
+     jar -cvf com.hotel.war *
     """
 
 }
