@@ -8,7 +8,10 @@ stage('compile-package')
 {
 def javahome=tool name: 'JAVAHOME', type: 'jdk'
   echo javahome
-bat "${javahome}/bin jar -cvf com.hotel.war"
+bat """
+     cd ${javahome}\\bin 
+     jar -cvf com.hotel.war
+    """
 
 }
 
