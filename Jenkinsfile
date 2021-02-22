@@ -6,8 +6,8 @@ git 'https://github.com/shashisingh5/MVCHibernateCRUD'
 }
 stage('compile-package')
 {
-
-sh '' 
+def javahome=tool name: 'JAVAHOME', type: 'jdk'
+sh "${javahome}/bin/jar -cvf com.hotel.war *"
 
 }
 
