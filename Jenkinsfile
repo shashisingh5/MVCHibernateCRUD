@@ -1,5 +1,5 @@
 node{
-stege('SCM Checkout')
+stage('SCM Checkout')
 {
 git 'https://github.com/shashisingh5/MVCHibernateCRUD'
 
