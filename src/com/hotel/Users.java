@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.validation.constraints.Digits;
+import javax.validation.constraints.Min;
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Null;
 import javax.validation.constraints.Pattern;
 
 import org.hibernate.validator.constraints.Email;
@@ -18,7 +21,7 @@ public class Users extends Address {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-
+    
 	public Users() {
 		super();
 	}
@@ -36,7 +39,10 @@ public class Users extends Address {
 	
 	@Column(name="userid")
 	@Id
-	int userid;
+	@Digits(integer=12,fraction=0,message="It Should be number")
+	@Min(value=1,message="Enter Valid User Id")
+	@NotNull(message= "User Id must not be empty")
+	Integer userid;
 	
 	
 	@Column(name="email")
@@ -56,10 +62,10 @@ public class Users extends Address {
 		this.phoneno = phoneno;
 	}
 	
-	public int getUserid() {
+	public Integer getUserid() {
 		return userid;
 	}
-	public void setUserid(int userid) {
+	public void setUserid(Integer userid) {
 		this.userid = userid;
 	}
 	public String getEmailid() {
