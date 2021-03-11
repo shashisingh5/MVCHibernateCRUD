@@ -9,6 +9,7 @@
 </head>
 <body>
 User ${u.name} Data Inserted!! <br>
+User ${u.userid} Data Deleted!! <br>
 <a href="addUser">Add New User</a>
 </body>
 </html>
