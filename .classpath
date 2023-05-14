@@ -15,5 +15,6 @@
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="lib" path="WebContent/WEB-INF/lib"/>
+	<classpathentry kind="lib" path="C:/Users/User/.m2/repository/com/oracle/database/jdbc/ojdbc10/19.15.0.0.1/ojdbc10-19.15.0.0.1.jar"/>
 	<classpathentry kind="output" path="build/classes"/>
 </classpath>

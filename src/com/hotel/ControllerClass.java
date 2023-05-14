@@ -50,14 +50,14 @@ public class ControllerClass {
 	
 	@RequestMapping(value="/delete",params = "dt",method = RequestMethod.POST)    
     public String deleteuser(@Valid @ModelAttribute("d") Users u, BindingResult brd,Model m){    
-		 
-		if(brd.hasErrors())
-	       {
-			m.addAttribute("u", new Users()); 
-	       
-	       
-	    	   return "addUser";  
-	       }
+//		 
+//		if(brd.hasErrors())
+//	       {
+//			System.out.println("Delete has error:"+ brd.toString());
+//			m.addAttribute("u", new Users()); 
+//	    	   return "addUser";  
+//	       }
+		System.out.println("user id"+u.getUserid());
 		dao.deleteUsers(u.getUserid()); 
 		m.addAttribute("userid", u.getUserid());
         return "success";
