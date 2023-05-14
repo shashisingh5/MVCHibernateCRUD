@@ -26,6 +26,7 @@ public class usersDAO {
 	public void deleteUsers(int userid) {
 		Users u = new Users();
 	    u.setUserid(userid);
+	    System.out.println("Dao Delete action");
 		template.delete(u);
 		
 	}
