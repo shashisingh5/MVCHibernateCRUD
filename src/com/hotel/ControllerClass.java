@@ -57,7 +57,7 @@ public class ControllerClass {
 //			m.addAttribute("u", new Users()); 
 //	    	   return "addUser";  
 //	       }
-		System.out.println("user id"+u.getUserid());
+		System.out.println("user id to be deleted is"+u.getUserid());
 		dao.deleteUsers(u.getUserid()); 
 		m.addAttribute("userid", u.getUserid());
         return "success";
